@@ -19,9 +19,10 @@ fetch("houses.json")
 
             // generate the html snippet for one array item
             //to be added to the "html" temp holder.
-            let objInfo = `<p class="house">${house.name}</p>
-        <p class="folks">${family}</p>`;
+            let objInfo = `<dt class="house">${house.name}</dt>
+            <dd class="folks">${family}</dd>`;
             html += objInfo;
+            // objInfo.setAttribute(id,'dt');
         });
 
         //make a reference to the html container where
@@ -31,3 +32,11 @@ fetch("houses.json")
     })
     .catch((err) => console.log("Oops!", err));
     //this only runs if there is an error during the above process
+
+fetch("https://www.colr.org/json/schemes/random/7")
+    .then((response)  => response.json())
+    .then((data) => {
+        
+    });
+
+    
